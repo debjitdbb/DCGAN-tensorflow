@@ -6,7 +6,9 @@ import json
 from model import DCGAN
 from utils import pp, visualize, to_json, show_all_variables, expand_path, timestamp
 
-import tensorflow as tf
+# import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 
 flags = tf.app.flags
 flags.DEFINE_integer("epoch", 25, "Epoch to train [25]")
